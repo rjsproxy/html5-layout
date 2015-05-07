@@ -1,0 +1,49 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+
+.snac-full-view {
+  min-height: 100vh;
+}
+
+
+.thumbnail {
+  background: rgba(0,0,0,0);
+  //border: none;
+}
+
+// .img-responsive {
+//   margin: 0 auto;
+// }
+
+
+#landing{
+
+  width: 100%;
+  min-height: 50vh;
+
+  background-image: url("/images/Framlingham_College.jpg");
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+h1 {
+  border: solid 1px black;
+  width: auto;
+  background: rgba(255,255,255,0.3);
+}
+
+.col-padding-top {
+  padding-top: 5vh;
+}
+
+.footer {
+  width: 100%;
+  background-color: $navbar-inverse-bg;
+  padding: 20px;
+}
