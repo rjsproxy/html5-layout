@@ -1,0 +1,61 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+
+body {
+    height: 100%;
+    background-color: #222;
+    background-image: url(https://download.unsplash.com/photo-1428342109953-409d2876cdab);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.snac-landing {
+    min-height: 100vh;
+}
+
+
+.snac-phrasing {
+    background-color: #eee;
+    min-height: 100vh;
+}
+
+.snac-footer {
+    background-color: #222;
+}
+
+
+
+.snac-flex {
+    position: absolute;
+    top: 50px;
+    //right: 0;
+    bottom: 0;
+    //left: 0;
+    //z-index: -1; // make sure nav is on top.
+    
+    border: 1px solid green;
+
+    // border: 1px solid black;
+
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+     //align-items: space-around;
+     //align-content: space-around;
+     //align-items: space-around;
+
+}
+
+.snac-flex-item {
+     border: 1px solid black;
+     //height:auto;
+     //margin: auto;
+}
