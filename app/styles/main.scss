@@ -1,4 +1,4 @@
-$icon-font-path: '../fonts/';
+//$icon-font-path: '../fonts/';
 
 // bower:scss
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -40,34 +40,75 @@ p {
 }
 
 .snac-phrasing { // hide background.
-    background-color: #eee;
+    background-color: rgb(250,240,230);
+   //background: linear-gradient(40deg, rgb(255,255,255), rgb(150,150,150), rgb(255,255,255));
     min-height: 100vh;
+
+    p {
+        text-align: justify;
+    }
+}
+
+.snac-gallery { // flex box to layout a bunch of images.
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // border: 2px solid green;
+
+    padding: 5px 0px;
+
+    a { // make href fill div.
+        display:block;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .snac-image { // simple thumnail and link.
     position: relative;
     overflow: hidden;
+    flex: 1 1 auto;   /* don't grow, shrink uniformly */
+    //border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
 
-    .snac-image-caption {
-        position: absolute;
-        bottom: 0;
-        padding:0;
-        background-color: rgba(30,30,20,0.7);
-        text-align:center;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 200px;
+    height: 200px;
+
+
+    &:hover {
+        box-shadow: 0 0 10px #333;
+        transform: scale(1.01); // horrible, but fun that it works.
+    }
+
+    a {
+
+
+        .snac-image-caption {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: rgba(180,180,120,0.8);
+            text-align:center;
+        }
     }
 }
 
 
-
-
-.snac-flexing {
+//.snac-flexing {
     //display: flex;
     //flex-direction: column;
     //flex-wrap: nowrap;
     //justify-content: center;
     //min-height: 100vh;
     //border: 1px solid blue;
-}
+//}
 
 
 .snac-flexing > * {

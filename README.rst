@@ -3,6 +3,27 @@ html5-layout
 
 Experimenting with html, css, js, etc.
 
+Still not sure the best way to do this.  Linking the global nodes module into
+the local directory feels like a hack, but "sudo npm install -g" is not a done
+thing. ::
+
+    $ git clone https://github.com/ticti/html5-layout.git
+    $ cd html5-layout
+    $ ln -s /usr/local/lib/node_modules . 
+    $ sudo npm install
+    $ bower install
+    $ gulp serve
+
+Install local might be the correct way to do it (untested). ::
+
+    $ git clone https://github.com/ticti/html5-layout.git
+    $ cd html5-layout
+    $ npm install
+    $ bower install
+    $ gulp serve
+
+
+
 
 Debian
 ------
