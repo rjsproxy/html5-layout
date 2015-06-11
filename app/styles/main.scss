@@ -1,8 +1,19 @@
-//$icon-font-path: '../fonts/';
+// fonts
+// color scheme
+// - https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
 
-// bower:scss
-//@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+
+$title-color: hsl(173,0%,50%);
+
+$phrasing-width: 60rem;
+$phrasing-margin: 0.25rem 0.5rem;
+$phrasing-color: hsl(0,0%,100%);
+$phrasing-background: hsl(0,0%,0%);
+
+$primary-color: #333;
+
+
+$y: #eeeeee;
 
 * {
     padding: 0px;
@@ -12,7 +23,7 @@
 body {
     height: 100%;
     background-color: #222;
-    background-image: url(https://download.unsplash.com/photo-1428342109953-409d2876cdab);
+//    background-image: url(https://download.unsplash.com/photo-1428342109953-409d2876cdab);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,27 +31,30 @@ body {
 }
 
 h1, h2 {
-    padding: 20px 0px;
+    color: $title-color;
+    padding: $phrasing-margin;
+    //letter-spacing: 5px;
+
+    small {
+        color: lighten(black, 20%);
+        //letter-spacing: 1px;
+    }
 }
 
 p {
-    padding: 5px 0px;
+    padding: $phrasing-margin;
+    color: $phrasing-color;
 }
 
-
 .snac-contain {
-    max-width: 900px; // limit size.
+    max-width: $phrasing-width; // limit size.
     margin-left: auto; // center.
     margin-right: auto;
 }
 
-.snac-landing {
-    position: relative; // allow childrent to be absolute.
-    min-height: 100vh; // fill display.
-}
 
 .snac-phrasing { // hide background.
-    background-color: rgb(250,240,230);
+    background-color: $phrasing-background;
    //background: linear-gradient(40deg, rgb(255,255,255), rgb(150,150,150), rgb(255,255,255));
     min-height: 100vh;
 
@@ -48,6 +62,31 @@ p {
         text-align: justify;
     }
 }
+
+
+
+
+
+
+// Landing
+
+
+.snac-landing {
+    position: relative; // allow childrent to be absolute.
+    min-height: 100vh; // fill display.
+}
+
+.snac-landing-title {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba($y, 0.7);
+}
+
+
+// Services.
+
 
 .snac-gallery { // flex box to layout a bunch of images.
     width: 100%;
@@ -80,26 +119,20 @@ p {
     width: 200px;
     height: 200px;
 
-
     &:hover {
         box-shadow: 0 0 10px #333;
         transform: scale(1.01); // horrible, but fun that it works.
     }
-
-    a {
-
-
-        .snac-image-caption {
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            background-color: rgba(180,180,120,0.8);
-            text-align:center;
-        }
-    }
 }
 
+.snac-image-caption {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(180,180,120,0.8);
+    text-align:center;
+}
 
 //.snac-flexing {
     //display: flex;
@@ -122,13 +155,6 @@ p {
     background-color: rgba(230,230,200,0.7);
 }
 
-.snac-align-bottom {
-    position: absolute;
-    left:0;
-    right:0;
-    bottom: 0;
-    background-color: rgba(230,230,200,0.7);
-}
 
 // TESTING.
 
