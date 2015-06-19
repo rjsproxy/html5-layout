@@ -1,0 +1,34 @@
+
+
+.snac-footer-sitemap {
+    display: flex;
+    //flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    //width:100%;
+}
+
+.snac-footer-sitemap-group {
+
+
+    flex: 1;
+    min-width: 5rem;
+
+    min-width: 10rem;
+    //border: 1px solid red;
+
+    text-align: center;
+    a:link, a:visited { color: lighten(black, 15%); }
+    a:hover, a:active { color: lighten(red, 10%); }
+
+    p {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+
+        a { text-decoration: none; }
+    }
+
+}

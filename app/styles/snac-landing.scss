@@ -1,0 +1,19 @@
+
+.snac-landing {
+    position: relative; // allow childrent to be absolute.
+    min-height: 100vh; // fill display.
+    background-color: #222;
+    background-image: url('/images/040703_5205_2.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.snac-landing-title {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba($y, 0.7);
+}

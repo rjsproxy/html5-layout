@@ -1,50 +1,38 @@
 // fonts
 // color scheme
 // - https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+// @import '/fonts/theleagueof-league-gothic-64c3ede/webfonts/stylesheet.css';
 
-
-$title-color: hsl(173,0%,50%);
+$title-color: hsl(173,0%,25%);
 
 $phrasing-width: 60rem;
 $phrasing-margin: 0.25rem 0.5rem;
-$phrasing-color: hsl(0,0%,100%);
-$phrasing-background: hsl(0,0%,0%);
+$phrasing-color: hsl(0,0%,10%);
+$phrasing-background: hsl(0,0%,95%);
 
 $primary-color: #333;
 
 
 $y: #eeeeee;
 
+
+
+
+
 * {
     padding: 0px;
     margin: 0px;
 }
 
+
+@import 'snac-mixins';
+@import 'snac-typography';
+
+
 body {
     height: 100%;
-    background-color: #222;
-//    background-image: url(https://download.unsplash.com/photo-1428342109953-409d2876cdab);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-h1, h2 {
-    color: $title-color;
-    padding: $phrasing-margin;
-    //letter-spacing: 5px;
-
-    small {
-        color: lighten(black, 20%);
-        //letter-spacing: 1px;
-    }
-}
-
-p {
-    padding: $phrasing-margin;
-    color: $phrasing-color;
-}
 
 .snac-contain {
     max-width: $phrasing-width; // limit size.
@@ -52,6 +40,9 @@ p {
     margin-right: auto;
 }
 
+.snac-section {
+    padding: 0 0 10vh 0;
+}
 
 .snac-phrasing { // hide background.
     background-color: $phrasing-background;
@@ -71,18 +62,6 @@ p {
 // Landing
 
 
-.snac-landing {
-    position: relative; // allow childrent to be absolute.
-    min-height: 100vh; // fill display.
-}
-
-.snac-landing-title {
-    position: absolute;
-    left:0;
-    right:0;
-    bottom: 0;
-    background-color: rgba($y, 0.7);
-}
 
 
 // Services.
@@ -109,7 +88,7 @@ p {
     overflow: hidden;
     flex: 1 1 auto;   /* don't grow, shrink uniformly */
     //border: 1px solid black;
-    border-radius: 5px;
+    @include border-radius(5px);
     margin: 5px;
 
     background-position: 50% 50%;
@@ -120,7 +99,7 @@ p {
     height: 200px;
 
     &:hover {
-        box-shadow: 0 0 10px #333;
+        @include box-shadow(0px 0px 10px #333);
         transform: scale(1.01); // horrible, but fun that it works.
     }
 }
@@ -150,18 +129,24 @@ p {
     //border: 1px solid green;
 }
 
+
 .snac-spacing {
-    min-height: 20vh;
-    background-color: rgba(230,230,200,0.7);
+    min-height: 40vh;
+    background-color: #222;
+    background-image: url('/images/aca_exterior_day.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include box-shadow(inset 0px 12vh 3vh -10vh white);
+
 }
 
 
 // TESTING.
 
 
-.snac-footer {
-    background-color: #222;
-}
 
 
 
@@ -192,3 +177,9 @@ p {
      //height:auto;
      //margin: auto;
 }
+
+
+
+
+@import 'snac-landing';
+@import 'snac-footer';
